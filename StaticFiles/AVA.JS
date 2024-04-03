@@ -13,9 +13,8 @@ const toggleChatbot = () => {
 const chatInput = document.querySelector('.chatInput textarea');
 const chatInputButton = document.querySelector('.chatInput span');
 const chatBox = document.getElementById('chatBox');
-const API_KEY = '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';
+
 const generateResponse = (userMessage) => {
-  const API_URL = 'https://api.openai.com/v1/chat/completions';
   const requestOptions = {
     method: 'POST',
     headers: {
