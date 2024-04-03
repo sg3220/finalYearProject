@@ -14,27 +14,8 @@ const chatInput = document.querySelector('.chatInput textarea');
 const chatInputButton = document.querySelector('.chatInput span');
 const chatBox = document.getElementById('chatBox');
 
-const generateResponse = (userMessage) => {
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-type': 'application/json',
-      Authorization: `Bearer ${API_KEY}`,
-    },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: [{ role: 'user', content: `${userMessage}` }],
-    }),
-  };
-  fetch(API_URL, requestOptions)
-    .then((Res) => Res.json())
-    .then((JSONData) => {
-      console.log(JSONData);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+const generateResponse = (userMessage) => {};
+
 const addingChatToChatbot = (Message, ClassName) => {
   const newDiv = document.createElement('div');
   newDiv.classList.add('chat', ClassName);
