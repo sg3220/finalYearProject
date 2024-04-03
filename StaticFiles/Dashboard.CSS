@@ -9,6 +9,10 @@
   --colorWhite: #eeeeee;
   --colorWhite2: #cccccc;
 }
+.disabledCursor {
+  cursor: not-allowed;
+}
+
 .button03 {
   background-color: var(--colorBlack);
   color: var(--colorWhite);
@@ -82,7 +86,7 @@
   display: block;
 }
 .dashboardBody {
-  height: 325vh;
+  height: 400vh;
   width: 100%;
 
   background-color: var(--colorWhite);
@@ -102,7 +106,7 @@
   position: fixed;
 }
 .dashboardMain {
-  height: 320vh;
+  height: 395vh;
   width: 100%;
 
   background-color: transparent;
@@ -117,7 +121,6 @@
 .Home,
 .Members,
 .Audits {
-  height: 125vh;
   width: 100%;
 
   background-color: transparent;
@@ -129,12 +132,21 @@
   justify-content: space-evenly;
   margin-top: 5vh;
 }
+.Home {
+  height: 200vh;
+
+  background-color: transparent;
+}
 .Members {
   height: 100vh;
 
+  background-color: transparent;
   justify-content: flex-start;
 }
 .Audits {
+  height: 95vh;
+
+  background-color: transparent;
   margin-bottom: 5vh;
 }
 
@@ -154,6 +166,7 @@
   justify-content: space-evenly;
 
   padding: 0 10px;
+  margin: 50px 0;
 }
 .showAddMembers,
 .showAudits {
@@ -255,7 +268,10 @@
 
   background-color: transparent;
 }
-.headingMembers {
+.headingMembers,
+.headingTrainNewBot,
+.headingPreviouslyTrainedBots,
+.headingPreviouslyUploadedDocuments {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -286,7 +302,7 @@
 }
 
 .trainNewBot {
-  height: 60%;
+  height: 80%;
   width: 80%;
 
   background-color: var(--colorWhite2);
@@ -314,7 +330,8 @@
   background-color: transparent;
 }
 .showcasePreviouslyUploadedDocuments,
-.showcaseSelectedBotDocument {
+.showcaseSelectedBotDocument,
+.textareaField {
   height: 100px;
   width: 100%;
 
@@ -327,7 +344,14 @@
   align-items: center;
   justify-content: flex-start;
 }
-.uploadNewDocument {
+.textareaField {
+  resize: none;
+}
+.textareaField:focus {
+  outline: none;
+}
+.uploadNewDocument,
+.headingInputToPDF {
   font-size: 15px;
   font-weight: 500;
 
@@ -400,4 +424,10 @@ a {
 
   align-items: center;
   justify-content: center;
+}
+.droppable {
+  cursor: move;
+}
+.is-dragging {
+  border: 2px solid var(--primaryColor01);
 }

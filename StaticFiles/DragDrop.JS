@@ -1,34 +1,46 @@
-const item = document.getElementById('faithful-dog');
-const dropZone1 = document.getElementById('showcasePreviouslyTrainedBots');
-const dropZone2 = document.getElementById(
-  'showcasePreviouslyUploadedDocuments'
-);
-const dropZone3 = document.getElementById('showcaseSelectedBotDocument');
+const draggables = document.querySelectorAll('.draggable');
+const droppables = document.querySelectorAll('.swimlane');
 
-item.addEventListener('dragstart', (event) => {
-  console.log(event);
+draggables.forEach((task) => {
+  task.addEventListener('dragstart', () => {
+    task.classList.add('is-dragging');
+  });
+  task.addEventListener('dragend', () => {
+    task.classList.remove('is-dragging');
+  });
 });
 
-dropZone1.addEventListener('dragover', (event) => {
-  event.preventDefault();
+droppables.forEach((zone) => {
+  zone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+
+    const bottomTask = insertAboveTask(zone, e.clientY);
+    const curTask = document.querySelector('.is-dragging');
+
+    if (!bottomTask) {
+      zone.appendChild(curTask);
+    } else {
+      zone.insertBefore(curTask, bottomTask);
+    }
+  });
 });
 
-dropZone1.addEventListener('drop', (event) => {
-  dropZone1.prepend(item);
-});
+const insertAboveTask = (zone, mouseX) => {
+  const els = zone.querySelectorAll('.task:not(.is-dragging)');
 
-dropZone2.addEventListener('dragover', (event) => {
-  event.preventDefault();
-});
+  let closestTask = null;
+  let closestOffset = Number.NEGATIVE_INFINITY;
 
-dropZone2.addEventListener('drop', (event) => {
-  dropZone2.prepend(item);
-});
+  els.forEach((task) => {
+    const { top } = task.getBoundingClientRect();
 
-dropZone3.addEventListener('dragover', (event) => {
-  event.preventDefault();
-});
+    const offset = mouseY - top;
 
-dropZone3.addEventListener('drop', (event) => {
-  dropZone3.prepend(item);
-});
+    if (offset < 0 && offset > closestOffset) {
+      closestOffset = offset;
+      closestTask = task;
+    }
+  });
+
+  return closestTask;
+};

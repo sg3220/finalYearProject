@@ -60,109 +60,52 @@
     <main class="dashboardMain">
         <section class="Home" id="Home">
             <div class="previouslyTrainedBots">
-                <div class="headingPreviouslyTrainedBots">Previously Trained Bots:</div>
-                <div class="showcasePreviouslyTrainedBots" id="showcasePreviouslyTrainedBots">
-                    <div class="bot" id="faithful-dog" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/faithful-dog" target="_blank">
-                            <span class="material-symbols-rounded">
-                                smart_toy
-                            </span>
-                            <span class="botName">Faithful Dog</span>
-                        </a>
-                    </div>
-                    <div class="bot" id="majestic-lion" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/majestic-lion" target="_blank">
-                            <span class="material-symbols-rounded">
-                                smart_toy
-                            </span>
-                            <span class="botName">Majestic Lion</span>
-                        </a>
-                    </div>
-                    <div class="bot" id="graceful-swan">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/graceful-swan" target="_blank">
-                            <span class="material-symbols-rounded">
-                                smart_toy
-                            </span>
-                            <span class="botName">Graceful Swan</span>
-                        </a>
-                    </div>
-                    <div class="bot" id="cunning-fox" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/cunning-fox" target="_blank">
-                            <span class="material-symbols-rounded">
-                                smart_toy
-                            </span>
-                            <span class="botName">Cunning Fox</span>
-                        </a>
-                    </div>
-                    <div class="bot" id="noble-eagle" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/noble-eagle" target="_blank">
-                            <span class="material-symbols-rounded">
-                                smart_toy
-                            </span>
-                            <span class="botName">Noble Eagle</span>
+                <div class="headingPreviouslyTrainedBots">Previously Trained Bots: <button class="button03" id="brain02"
+                        onclick="return loadBot()"><span class="material-symbols-rounded">
+                            history
+                        </span>Load Bots & Previously Used Docs</button></div>
+                <div class="showcasePreviouslyTrainedBots swimlane" id="showcasePreviouslyTrainedBots">
+                    <div class="bot droppable" id="bot20240403220101" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Dashboard?botID=bot20240403220101" target="_blank">
+                            <span class="material-symbols-rounded">smart_toy</span>
+                            <span class="botName">bot20240403220101</span>
                         </a>
                     </div>
                 </div>
             </div>
             <div class="trainNewBot">
-                <div class="headingTrainNewBot">Train New Bot:</div>
+                <div class="headingTrainNewBot">Train New Bot: <button class="button03" id="brain01"
+                        onclick="return addBot()"><span class="material-symbols-rounded">
+                            add
+                        </span>New Bot</button></div>
                 <div class="headingPreviouslyUploadedDocuments">Previously Used Documents:</div>
-                <div class="showcasePreviouslyUploadedDocuments" id="showcasePreviouslyUploadedDocuments">
-                    <div class="document" id="article03042024">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/03042024.pdf" target="_blank">
+                <div class="showcasePreviouslyUploadedDocuments swimlane" id="showcasePreviouslyUploadedDocuments">
+                    <div class="document droppable" id="doc20240403220101" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Dashboard?doc20240403220101" target="_blank">
                             <span class="material-symbols-rounded">
                                 article
                             </span>
-                            <span class="botName">03042024.pdf</span>
-                        </a>
-                    </div>
-                    <div class="document" id="article02042024" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/02042024.pdf" target="_blank">
-                            <span class="material-symbols-rounded">
-                                article
-                            </span>
-                            <span class="botName">02042024.pdf</span>
-                        </a>
-                    </div>
-                    <div class="document" id="article01042024" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/01042024.pdf" target="_blank">
-                            <span class="material-symbols-rounded">
-                                article
-                            </span>
-                            <span class="botName">01042024.pdf</span>
-                        </a>
-                    </div>
-                    <div class="document" id="article31032024" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/31032024.pdf" target="_blank">
-                            <span class="material-symbols-rounded">
-                                article
-                            </span>
-                            <span class="botName">31032024.pdf</span>
-                        </a>
-                    </div>
-                    <div class="document" id="article30032024" draggable="true">
-                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/30032024.pdf" target="_blank">
-                            <span class="material-symbols-rounded">
-                                article
-                            </span>
-                            <span class="botName">30032024.pdf</span>
+                            <span class="botName">doc20240403220101</span>
                         </a>
                     </div>
                 </div>
                 <div class="uploadNewDocument">Upload New Document(s)(.pdf, .txt Only):</div>
-                <input class="file" type="file" placeholder="Select File" required multiple>
-                <div class="headingDragBotFile">Drag Bot/FIles To Train/Retrain:</div>
-                <div class="showcaseSelectedBotDocument" id="showcaseSelectedBotDocument">
-                    <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/03042024.pdf" target="_blank">
-                        <div class="bot">
-                            <span class="material-symbols-rounded">
-                                article
-                            </span>
-                            <span class="botName">03042024.pdf</span>
-                        </div>
-                    </a>
-                </div>
+                <input class="file" type="file" id="file" placeholder="Select File" required multiple>
+                <button class="button03" onclick="return UploadFile()">Upload File</button> <img id="processingImage"
+                    class="processingImage displayNone"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+                    alt="Processing..." />
 
+                <div class="headingInputToPDF">Input Text To Train Bot:</div>
+                <textarea class="textareaField" id="textareaField" resizable="false"></textarea>
+                <button class="button03" onclick="return TextToPDF()">Text To PDF</button> <img id="processingImage"
+                    class="processingImage displayNone"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+                    alt="Processing..." />
+
+                <div class="headingDragBotFile">Drag Bot/FIles To Train/Retrain:</div>
+                <div class="showcaseSelectedBotDocument swimlane" id="showcaseSelectedBotDocument">
+                </div>
                 <button class="button01">Start...</button> <img id="processingImage" class="processingImage displayNone"
                     src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
                     alt="Processing..." />
@@ -173,7 +116,8 @@
         </section>
         <section class="Members" id="Members">
             <div class="showAddMembers">
-                <div class="headingMembers">Members: <button class="button03"><span class="material-symbols-rounded">
+                <div class="headingMembers">Members: <button class="button03" onclick="return addMember()"><span
+                            class="material-symbols-rounded">
                             add
                         </span>Invite Member</button></div>
                 <div class="showcaseMembers" id="showcaseMembers">
@@ -238,6 +182,10 @@
         <script src="./AVA.JS" defer></script>
         <script src="./DragDrop.JS" defer></script>
         <script src="./DropDown.JS" defer></script>
+        <script src="./TextToPDF.JS" defer></script>
+        <script src="./UploadFile.JS" defer></script>
+        <script src="./addBot.JS" defer></script>
+        <script src="./loadBot.JS" defer></script>
     </main>
     <footer class="footer dashboardFooter">Copyright &#169; 2024, <span class="projectName">&nbsp;A.V.A. Bot</span>
     </footer>

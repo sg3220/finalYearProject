@@ -1,6 +1,6 @@
 window.onload = () => {
   const pathName = window.location.pathname;
-  const requestedPage = pathName.split('/V1/Auth/Account/')[1];
+  const requestedPage = pathName.split('/V1/')[1];
   if (requestedPage === 'LandingLogIn') {
     const button = document.getElementById('button02');
     button.click();
