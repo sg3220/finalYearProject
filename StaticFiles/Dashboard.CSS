@@ -1,0 +1,403 @@
+:root {
+  --primaryColor01: #0cb0d3;
+  --primaryColor02: #9d31fe;
+  --red: #f05362;
+  --yellow: #f5d152;
+  --green: #71c073;
+  --blue: #34bbc9;
+  --colorBlack: #111111;
+  --colorWhite: #eeeeee;
+  --colorWhite2: #cccccc;
+}
+.button03 {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+  padding: 4px;
+  border-radius: 4px;
+
+  font-family: 'Red Hat Display', sans-serif;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.headingLabel {
+  background-color: var(--colorBlack);
+  color: var(--colorWhite);
+
+  padding: 2px;
+  border-radius: 2px;
+}
+.headingLabel:hover,
+.headingLabel:focus {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primaryColor01),
+    var(--primaryColor02)
+  );
+  color: var(--colorWhite);
+}
+.dropButton {
+  padding: 4px 2px;
+}
+.dropDownContainer {
+  display: none;
+  position: absolute;
+  background-color: var(--colorBlack);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 10vh;
+  right: 0px;
+}
+.dropDownContainer a {
+  height: 10vh;
+  display: block;
+  text-decoration: none;
+  color: var(--colorWhite);
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+.dropDownContainerItem {
+  padding: 2px;
+  border-radius: 2px;
+}
+.dropDownContainerItem:hover {
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primaryColor01),
+    var(--primaryColor02)
+  );
+  color: var(--colorWhite);
+}
+.show {
+  display: block;
+}
+.dashboardBody {
+  height: 325vh;
+  width: 100%;
+
+  background-color: var(--colorWhite);
+}
+
+.dashboardHeader {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  background-color: var(--colorBlack);
+
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+}
+.dashboardMain {
+  height: 320vh;
+  width: 100%;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.Home,
+.Members,
+.Audits {
+  height: 125vh;
+  width: 100%;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 5vh;
+}
+.Members {
+  height: 100vh;
+
+  justify-content: flex-start;
+}
+.Audits {
+  margin-bottom: 5vh;
+}
+
+.previouslyTrainedBots,
+.showAddMembers,
+.showAudits {
+  height: 150px;
+  width: 80%;
+
+  background-color: var(--colorWhite2);
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  padding: 0 10px;
+}
+.showAddMembers,
+.showAudits {
+  height: inherit;
+}
+
+.bot,
+.document {
+  height: 80px;
+  width: 80px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+
+  margin: 10px;
+  background-color: var(--colorWhite2);
+  border-radius: 10px;
+  border: 2px solid var(--colorBlack);
+  cursor: pointer;
+}
+.member,
+.log {
+  height: 80px;
+  width: 80%;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 20px;
+  padding: 5px;
+  border-radius: 12px;
+  border: 2px solid var(--colorBlack);
+}
+.userInfo {
+  width: 75%;
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: flex-start;
+}
+.userInfo span {
+  margin: 10px;
+}
+
+.leftPartOfMember,
+.rightPartOfMember {
+  width: 50%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 0 10px;
+  background-color: transparent;
+}
+.rightPartOfMember {
+  justify-content: flex-end;
+}
+.tag {
+  background-color: var(--colorWhite2);
+  padding: 4px;
+  border-radius: 10px 10px 10px 0px;
+}
+.createBot,
+.addMember {
+  background-color: var(--green);
+  color: var(--colorWhite);
+}
+.updateBot {
+  background-color: var(--yellow);
+  color: var(--colorWhite);
+}
+.deleteBot,
+.removeMember {
+  background-color: var(--red);
+  color: var(--colorWhite);
+}
+.headingPreviouslyTrainedBots,
+.headingMembers .headingAudits {
+  font-size: 15px;
+  font-weight: 500;
+
+  background-color: transparent;
+}
+.headingMembers {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.showcasePreviouslyTrainedBots,
+.showcaseMembers,
+.showcaseLogs {
+  width: 100%;
+
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  padding-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.showcaseMembers,
+.showcaseLogs {
+  height: 90%;
+
+  flex-direction: column;
+}
+
+.trainNewBot {
+  height: 60%;
+  width: 80%;
+
+  background-color: var(--colorWhite2);
+  border-radius: 20px;
+  padding-left: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  padding: 0 10px;
+}
+.headingTrainNewBot {
+  font-size: 20px;
+  font-weight: 500;
+
+  background-color: transparent;
+}
+.headingPreviouslyUploadedDocuments {
+  font-size: 15px;
+  font-weight: 500;
+
+  background-color: transparent;
+}
+.showcasePreviouslyUploadedDocuments,
+.showcaseSelectedBotDocument {
+  height: 100px;
+  width: 100%;
+
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  padding-left: 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.uploadNewDocument {
+  font-size: 15px;
+  font-weight: 500;
+
+  background-color: transparent;
+}
+.file {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.URLOfNewBot {
+  font-size: 15px;
+  font-weight: 500;
+
+  background-color: transparent;
+}
+.actualURL {
+  font-size: 15px;
+  font-weight: 500;
+
+  width: 100%;
+
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.Members {
+  height: 100vh;
+  width: 100%;
+
+  background-color: transparent;
+}
+.Audits {
+  height: 100vh;
+  width: 100%;
+
+  background-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.left {
+  padding: 10px;
+}
+
+.listItem {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+
+  padding-right: 50px;
+
+  color: var(--colorWhite);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dashboardIcons {
+  height: 20px;
+  padding-right: 5px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  justify-content: center;
+}

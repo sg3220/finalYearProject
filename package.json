@@ -1,0 +1,18 @@
+{
+  "name": "pseudo-backend",
+  "version": "1.0.0",
+  "description": "I/O Performing Backend For A.V.A. Bot ",
+  "main": "Server.JS",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "Dev": "Nodemon Server.JS",
+    "Start": "Node Server.JS"
+  },
+  "author": "Siddharth Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "http-status": "^1.7.4",
+    "mime-types": "^2.1.35"
+  }
+}

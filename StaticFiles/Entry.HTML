@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Entry.CSS">
+    <title>A.V.A.</title>
+</head>
+
+<body>
+    <header class="displayNone"></header>
+
+    <main>
+        <img class="displayNone loadingAnimation"
+            src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+            alt="A.V.A. Bot Logo" />
+
+        <div class="pane01" id="pane01">
+            <form onsubmit="return sendData()">
+                <div class="wrapper heading01">Welcome To<span class="projectName">&nbsp;A.V.A.</span>
+                </div>
+                <div class="wrapper">
+                    <label for="organizationName">Organization Name</label>
+                    <input type="text" name="organizationName" id="organizationName" required />
+                </div>
+
+                <div class="wrapper">
+                    <label for="userID">User ID</label>
+                    <input type="text" name="userID" id="userID" rqeuired />
+                </div>
+
+                <div class="wrapper">
+                    <label for="emailAddress">Email Address</label>
+                    <input type="email" name="emailAddress" id="emailAddress" required />
+                </div>
+
+                <div class="wrapper">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required />
+                </div>
+
+                <div class="wrapper">
+                    <label for="confirmPassword">Re-Type Password</label>
+                    <input type="password" name="confirmPassword" id="confirmPassword" required />
+                </div>
+
+                <div class="wrapper">
+                    <div class="wrapper">
+                        <button class="button01" id="button01" type="submit"
+                            onclick="return sendData('actualSignUp')">Sign
+                            Up</button>
+                        <img id="processingImage" class="processingImage displayNone"
+                            src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+                            alt="Processing..." />
+
+                    </div>
+
+                    <button class="button02" id="button02" type="submit"
+                        onclick="return sendData('pseudoLogIn')">Already Have
+                        An
+                        Account...Log
+                        In</button>
+                </div>
+            </form>
+        </div>
+        <div class="pane02" id="pane02">
+            <div class="section">
+                <img class="explanationImage"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711958381/Final%20Year%20Project/image04_e3hckj.png"
+                    alt="Integration">
+                <div class="textPart">Our web application seamlessly integrates custom-trained chatbots into businesses'
+                    systems, without the need for any coding skills, ensuring effortless implementation.</div>
+            </div>
+            <div class="section">
+                <img class="explanationImage"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711958390/Final%20Year%20Project/image03_wnraha.png"
+                    alt="Multiple Input Ways">
+                <div class="textPart">Our platform offers diverse data input options such as .pdf, .txt, and more,
+                    empowering businesses to train their chatbots on various formats.</div>
+            </div>
+            <div class="section">
+                <img class="explanationImage"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711958387/Final%20Year%20Project/image05_aprryh.png"
+                    alt="Fast Training">
+                <div class="textPart">With our user-friendly interface and advanced algorithms, businesses experience
+                    significantly reduced chatbot training time.</div>
+            </div>
+            <div class="section">
+                <img class="explanationImage"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711958383/Final%20Year%20Project/image06_fwl1x5.png"
+                    alt="Easy Of Use">
+                <div class="textPart">Our platform offers intuitive functionalities, ensuring seamless integration and
+                    operation for businesses of all levels of expertise.</div>
+            </div>
+        </div>
+        <div class="pane03 displayNone" id="pane03">
+            <form onsubmit="return sendData()">
+                <div class="wrapper heading01">Log In To Your<span class="projectName">&nbsp;A.V.A.&nbsp;</span>
+                </div>
+                <div class="wrapper">
+                    <label for="uniqueID">Email Address/ User ID</label>
+                    <input type="text" name="uniqueID" id="uniqueID" required />
+                </div>
+
+                <div class="wrapper">
+                    <label for="password2">Password</label>
+                    <input type="password" name="password2" id="password2" rqeuired />
+                </div>
+
+                <div class="wrapper">
+                    <button class="button01" id="button01" type="submit" onclick="return sendData('actualLogIn')">Log
+                        In</button>
+                    <img id="processingImage" class="processingImage displayNone"
+                        src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+                        alt="Processing..." />
+
+
+                    <button class="button02" id="button02" type="submit" onclick="return sendData('pseudoSignUp')">New
+                        To
+                        A.V.A?...Sign
+                        Up</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        Copyright &#169; 2024, <span class="projectName">&nbsp;A.V.A.</span>
+    </footer>
+
+    <script src="./Entry.JS"></script>
+</body>
+
+</html>

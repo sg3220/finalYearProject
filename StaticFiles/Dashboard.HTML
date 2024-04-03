@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+        type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Rounded" rel="stylesheet">
+    <link rel="stylesheet" href="./Entry.CSS">
+    <link rel="stylesheet" href="./Dashboard.CSS">
+    <link rel="stylesheet" href="./AVA.CSS">
+    <link rel="stylesheet" href="./DropDown.CSS">
+    <title>A.V.A.</title>
+</head>
+
+<body class="dashboardBody">
+    <header class="header dashboardHeader">
+
+        <div class="left">
+            <div class="projectName">&nbsp;A.V.A.</div>
+        </div>
+
+        <div class="right">
+            <div class="listItem">
+                <img class="dashboardIcons"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711968394/Final%20Year%20Project/home_jwe92v.png"
+                    alt=""><a class="headingLabel" href="#Home"><strong>Home</strong></a>
+            </div>
+
+            <div class="listItem"><img class="dashboardIcons"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711968396/Final%20Year%20Project/members_oyrf4x.png"
+                    alt=""><a class="headingLabel" href="#Members"><strong>Members</strong></a>
+            </div>
+            <div class="listItem"><img class="dashboardIcons"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711968399/Final%20Year%20Project/audit_nt8lde.png"
+                    alt=""><a class="headingLabel" href="#Audits"><strong>Audits</strong></a>
+            </div>
+            <div class="listItem"><img class="dashboardIcons"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711968392/Final%20Year%20Project/settings_hnurjz.png"
+                    alt="">
+                <button class="button03 dropButton headingLabel"
+                    onclick="return dropFunction()"><strong>Settings</strong></button>
+                <div class="dropDownContainer" id="dropDownContainer">
+                    <a href=""><span class="dropDownContainerItem">Option1</span></a>
+                    <a href=""><span class="dropDownContainerItem">Option2</span></a>
+                    <a href=""><span class="dropDownContainerItem">Option3</span></a>
+                    <a href=""><span class="dropDownContainerItem">Option4</span></a>
+                    <a onclick="return LogOut()"><span class="dropDownContainerItem">LogOut</span></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="dashboardMain">
+        <section class="Home" id="Home">
+            <div class="previouslyTrainedBots">
+                <div class="headingPreviouslyTrainedBots">Previously Trained Bots:</div>
+                <div class="showcasePreviouslyTrainedBots" id="showcasePreviouslyTrainedBots">
+                    <div class="bot" id="faithful-dog" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/faithful-dog" target="_blank">
+                            <span class="material-symbols-rounded">
+                                smart_toy
+                            </span>
+                            <span class="botName">Faithful Dog</span>
+                        </a>
+                    </div>
+                    <div class="bot" id="majestic-lion" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/majestic-lion" target="_blank">
+                            <span class="material-symbols-rounded">
+                                smart_toy
+                            </span>
+                            <span class="botName">Majestic Lion</span>
+                        </a>
+                    </div>
+                    <div class="bot" id="graceful-swan">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/graceful-swan" target="_blank">
+                            <span class="material-symbols-rounded">
+                                smart_toy
+                            </span>
+                            <span class="botName">Graceful Swan</span>
+                        </a>
+                    </div>
+                    <div class="bot" id="cunning-fox" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/cunning-fox" target="_blank">
+                            <span class="material-symbols-rounded">
+                                smart_toy
+                            </span>
+                            <span class="botName">Cunning Fox</span>
+                        </a>
+                    </div>
+                    <div class="bot" id="noble-eagle" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/noble-eagle" target="_blank">
+                            <span class="material-symbols-rounded">
+                                smart_toy
+                            </span>
+                            <span class="botName">Noble Eagle</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="trainNewBot">
+                <div class="headingTrainNewBot">Train New Bot:</div>
+                <div class="headingPreviouslyUploadedDocuments">Previously Used Documents:</div>
+                <div class="showcasePreviouslyUploadedDocuments" id="showcasePreviouslyUploadedDocuments">
+                    <div class="document" id="article03042024">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/03042024.pdf" target="_blank">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">03042024.pdf</span>
+                        </a>
+                    </div>
+                    <div class="document" id="article02042024" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/02042024.pdf" target="_blank">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">02042024.pdf</span>
+                        </a>
+                    </div>
+                    <div class="document" id="article01042024" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/01042024.pdf" target="_blank">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">01042024.pdf</span>
+                        </a>
+                    </div>
+                    <div class="document" id="article31032024" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/31032024.pdf" target="_blank">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">31032024.pdf</span>
+                        </a>
+                    </div>
+                    <div class="document" id="article30032024" draggable="true">
+                        <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/30032024.pdf" target="_blank">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">30032024.pdf</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="uploadNewDocument">Upload New Document(s)(.pdf, .txt Only):</div>
+                <input class="file" type="file" placeholder="Select File" required multiple>
+                <div class="headingDragBotFile">Drag Bot/FIles To Train/Retrain:</div>
+                <div class="showcaseSelectedBotDocument" id="showcaseSelectedBotDocument">
+                    <a href="http://127.0.0.1:4000/V1/Auth/Account/Dashboard/03042024.pdf" target="_blank">
+                        <div class="bot">
+                            <span class="material-symbols-rounded">
+                                article
+                            </span>
+                            <span class="botName">03042024.pdf</span>
+                        </div>
+                    </a>
+                </div>
+
+                <button class="button01">Start...</button> <img id="processingImage" class="processingImage displayNone"
+                    src="https://res.cloudinary.com/djywrhroe/image/upload/v1711936273/Final%20Year%20Project/image01_xd6utq.png"
+                    alt="Processing..." />
+                <div class="URLOfNewBot">URL Of Your Bot:</div>
+                <div class="actualURL">actualURL</div>
+
+            </div>
+        </section>
+        <section class="Members" id="Members">
+            <div class="showAddMembers">
+                <div class="headingMembers">Members: <button class="button03"><span class="material-symbols-rounded">
+                            add
+                        </span>Invite Member</button></div>
+                <div class="showcaseMembers" id="showcaseMembers">
+                    <div class="member">
+                        <div class=leftPartOfMember>
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+                            <span>siddharthghosh3220@gmail.com</span>
+                            <span class="tag">You</span>
+                            <span class="tag">Owner</span>
+                        </div>
+                        <div class=rightPartOfMember>
+                            <span class="material-symbols-rounded">
+                                more_vert
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Audits" id="Audits">
+            <div class="showAudits">
+                <div class="headingAudits">Logs: </div>
+                <div class="showcaseLogs" id="showcaseMembers">
+                    <div class="log">
+                        <div class="userInfo">
+                            <span class="material-symbols-rounded">
+                                person
+                            </span>
+                            <span><strong>siddharthghosh3220@gmail.com</strong> Created A Bot Named
+                                <strong>Faithful-Dog</strong><br />31 March, 2024,
+                                17:30</span>
+                        </div>
+                        <div class="operationInfo">
+                            <span class="tag createBot"><strong>Created A Bot</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="wrapperChatbot" class="wrapperChatbot displayNone">
+            <div class="botHeading">Chatbot</div>
+            <div id="chatBox" class="chatBox">
+            </div>
+            <div class="chatInput">
+                <textarea id="dimag" placeholder="Chat With A.V.A..." required></textarea>
+                <span id="sendButton" class="material-symbols-rounded myIcon sendIcon">
+                    send
+                </span>
+            </div>
+            <div class="botFooter">Powered&nbsp;&nbsp;By&nbsp;&nbsp;<span class="projectHeading">A.V.A.</span></div>
+        </div>
+        <button class="chatbotToggler" onclick="return toggleChatbot()">
+            <span class="material-symbols-rounded" id="spanChatbotToggler">
+                chat_bubble
+            </span>
+
+        </button>
+        <script src="./AVA.JS" defer></script>
+        <script src="./DragDrop.JS" defer></script>
+        <script src="./DropDown.JS" defer></script>
+    </main>
+    <footer class="footer dashboardFooter">Copyright &#169; 2024, <span class="projectName">&nbsp;A.V.A. Bot</span>
+    </footer>
+
+</body>
+
+</html>
